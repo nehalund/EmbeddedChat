@@ -30,6 +30,10 @@
         //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
         //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
         //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+embedded_svc.settings.extraPrechatFormDetails = [{"label":"Country","value":"DE","transcriptFields":[],"displayToAgent":true}, {"label":"Contact Method","value":"Telephone","transcriptFields":[],"displayToAgent":true},{"label":"Subject","value":"Subject","transcriptFields":[],"displayToAgent":true}, {"label":"Product Brand","value":"Velo","transcriptFields":[],"displayToAgent":true}] ; 
+        embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps":[{"doCreate":false,"doFind":true,"fieldName":"LastName","isExactMatch":true,"label":"Last Name"},{"doCreate":false,"doFind":true,"fieldName":"FirstName","isExactMatch":true,"label":"First Name"}, {"doCreate":false,"doFind":true,"fieldName":"Email","isExactMatch":true,"label":"Email"}],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":true},
+{"entityName":"Case","showOnCreate":true,"entityFieldMaps":[{"isExactMatch":false,"fieldName":"Country__c","doCreate":true,"doFind":false,"label":"Country"}, {"isExactMatch":false,"fieldName":"Contact_Method__c","doCreate":true,"doFind":false,"label":"Contact Method"}, {"isExactMatch":true,"fieldName":"First_Name__c","doCreate":true,"doFind":true,"label":"First Name"}, {"isExactMatch":true,"fieldName":"Last_Name__c","doCreate":true,"doFind":true,"label":"Last Name"},{"isExactMatch":false,"fieldName":"Subject","doCreate":true,"doFind":false,"label":"Subject"}, {"isExactMatch":false,"fieldName":"Product_Brand__c","doCreate":true,"doFind":false,"label":"Product Brand"}]}];
+        
 
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
